@@ -3,10 +3,10 @@ package com.selenium.methods;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.Test;
 
 import java.io.File;
-import java.sql.Driver;
-import java.util.List;
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -74,12 +74,13 @@ public class SeleniumTest
 
 
     }
-    public void screeshot()
-    {
+    @Test
+    public void screenShot() throws IOException {
         File f=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(srcFile,new File("D:\\screenShot.png"));
 
-        driver.findElement(By.id(""));
+        FileUtils.copyFile(f,new File("C:\\Users\\Mhasa\\IdeaProjects\\EdgeTech_Selenium_Methods\\src\\main\\java\\com\\selenium\\methods\\src\\main\\java\\com\\selenium\\screenShot.png"));
+
+        //driver.findElement(By.id(""));
         //Mysql@127.0.0.1:3306
     }
 }
