@@ -31,6 +31,7 @@ public class SeleniumTest
         driver.getPageSource();//in oder to get the page source like DOM
         driver.close();
         driver.switchTo().alert().accept();//accept ,dismiss, sendkeyes, getText methods available under alert.
+        driver.switchTo().window().getWindowHandles()//
         driver.quit();
         driver.navigate().to(appUrl);
         driver.navigate().refresh();//in order to refresh the browser
