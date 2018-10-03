@@ -30,6 +30,7 @@ public class SeleniumTest
         driver.getCurrentUrl();//To get current url
         driver.getPageSource();//in oder to get the page source like DOM
         driver.close();
+        driver.switchTo().alert().accept();//accept ,dismiss, sendkeyes, getText methods available under alert.
         driver.quit();
         driver.navigate().to(appUrl);
         driver.navigate().refresh();//in order to refresh the browser
